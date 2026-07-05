@@ -38,8 +38,6 @@ The biomedical model used here (`d4data/biomedical-ner-all`) is trained on clini
 - drops very generic labels that matched almost anything
 - filters out common non-medical words that kept showing up by mistake
 
-This means results are much cleaner for genuinely medical papers, and mostly empty (correctly) for papers that aren't medical at all.
-
 ## Requirements
 
 - Python
@@ -56,7 +54,6 @@ This means results are much cleaner for genuinely medical papers, and mostly emp
 The notebook is meant to be run in Google Colab, since it uses Google Drive to cache results between sessions. Run the cells from top to bottom. The first run will take longer since it has to build the embeddings and search index from scratch; later runs will load the cached files instead.
 
 ## Possible next steps
-
 - Add a proper trend analysis, which would need a dataset that includes publication dates
 - Add a search filter based on entities (for example, only show papers that mention a specific model or dataset)
 - Package the search and summarization into a simple web app instead of a notebook
